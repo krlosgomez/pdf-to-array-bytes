@@ -1,0 +1,54 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pdf to Array binary bytes</title>
+
+  <link rel="stylesheet" href="./styles/bootstrap/bootstrap.min.css">
+  <script src="./libs/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+
+<body>
+  <div class="d-flex h-100 justify-content-center align-items-center p-5">
+
+    <div class="row">
+
+      <div class="col-12">
+        <div class="mb-3">
+          <label for="formFile" class="form-label">Seleccionar pdf:</label>
+          <input #formFile class="form-control" type="file" id="formFile" accept="application/pdf">
+        </div>
+      </div>
+
+      <div class="col-12 text-center">
+        <button class="btn btn-primary" onclick="Main()" id="converter-button">
+          Convertir
+        </button>
+        <button class="btn btn-primary" type="button" disabled id="loading-button" hidden>
+          <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+          Loading
+          <span class="visually-hidden">Loading...</span>
+        </button>
+      </div>
+
+      <div class="col-12 text-center">
+        <textarea name="binary-bytes" id="binary-bytes" class="mt-5 form-control" style="overflow-x: hidden;" rows="6"
+          readonly></textarea>
+        <button class="btn btn-info mt-3" onclick="copiarAlPortapapeles()">
+          Copiar
+          <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true" id="loading-copy"
+            hidden></span>
+        </button>
+      </div>
+
+    </div>
+
+  </div>
+</body>
+
+<script type="text/javascript" src="./index.js"></script>
+
+</html>
